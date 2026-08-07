@@ -170,8 +170,8 @@ button { cursor: pointer; }
 .partner-cloud span img { width: 100%; max-width: 96px; height: 72px; object-fit: contain; }
 
 .gallery-section { padding-bottom: 40px; }
-.gallery-grid { column-count: 3; column-gap: 16px; }
-.gallery-grid img { display: block; width: 100%; margin-bottom: 16px; border-radius: 18px; break-inside: avoid; }
+.gallery-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+.gallery-grid img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 18px; }
 
 .client-logos-section { background: #fff; }
 .client-logo-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 18px; align-items: center; }
@@ -355,8 +355,7 @@ button { cursor: pointer; }
   .team-grid { grid-template-columns: repeat(2,1fr); }
   .partner-cloud { grid-template-columns: repeat(2,1fr); }
   .client-logo-grid { grid-template-columns: repeat(4,1fr); }
-  .gallery-grid { column-count: 2; column-gap: 12px; }
-  .gallery-grid img { margin-bottom: 12px; }
+  .gallery-grid { grid-template-columns: repeat(2,1fr); gap: 12px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .track-grid { grid-template-columns: 1fr; }
   .page-hero { padding: 112px 0 52px; }
