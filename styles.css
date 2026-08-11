@@ -166,6 +166,7 @@ button { cursor: pointer; }
 .trust-tally strong { color: var(--red); font-size: 1.65rem; }
 .trust-tally span { color: var(--muted); }
 .partner-cloud { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+.corporate-partners .partner-cloud { grid-template-columns: repeat(6,1fr); }
 .partner-cloud span { display: grid; place-items: center; align-content: center; gap: 10px; min-height: 90px; padding: 16px; color: var(--teal-deep); background: var(--paper); border: 1px solid var(--line); border-radius: 16px; text-align: center; font-size: .82rem; font-weight: 800; }
 .partner-cloud span img { width: 100%; max-width: 96px; height: 72px; object-fit: contain; }
 
@@ -358,6 +359,7 @@ button { cursor: pointer; }
   .founder-image { min-height: 430px; }
   .team-grid { grid-template-columns: repeat(2,1fr); }
   .partner-cloud { grid-template-columns: repeat(2,1fr); }
+  .corporate-partners .partner-cloud { grid-template-columns: repeat(3,1fr); }
   .client-logo-grid { grid-template-columns: repeat(4,1fr); }
   .gallery-grid { grid-template-columns: repeat(2,1fr); gap: 12px; }
   .gallery-cards { grid-template-columns: repeat(2,1fr); gap: 12px; }
@@ -402,6 +404,7 @@ button { cursor: pointer; }
   .team-card h3, .team-card p, .team-card span { margin-left: 12px; margin-right: 12px; }
   .team-card h3 { font-size: .85rem; }
   .partner-cloud { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .corporate-partners .partner-cloud { grid-template-columns: 1fr 1fr; }
   .partner-cloud span { min-height: 78px; padding: 10px; font-size: .7rem; }
   .partner-cloud span img { max-width: 72px; height: 54px; }
   .client-logo-grid { grid-template-columns: repeat(3,1fr); gap: 10px; }
