@@ -1,0 +1,21 @@
+# Jekyll config — GitHub Pages builds this automatically on every push.
+# Blog posts live in _posts/ (created via /admin or by hand) and are
+# rendered with _layouts/post.html at /blog/<slug>/.
+title: STARS Training Academy
+url: https://harishik-ram.github.io
+baseurl: /Stars_medical   # change to "" if a custom domain is added later
+timezone: Asia/Kolkata
+future: true
+
+permalink: /blog/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - content.md

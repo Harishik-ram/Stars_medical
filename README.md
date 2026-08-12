@@ -9,6 +9,7 @@ A responsive, multi-page website for STARS Training Academy — hands-on emergen
 - `programmes.html` — Full course catalogue (STARS Certified / JeevaRaksha / AHA tabs)
 - `team.html` — Founder + faculty
 - `partners.html` — Partner institutions
+- `blog.html` — Blog listing (posts rendered by Jekyll from `_posts/`)
 - `faq.html` — Frequently asked questions
 - `contact.html` — Enquiry form, contact details + Google map
 
@@ -44,6 +45,30 @@ Then open `http://localhost:8090`.
 Upload the whole folder to any static host (Netlify, GitHub Pages, Cloudflare Pages).
 No build step. Before going live, set the canonical URL: uncomment and fill the
 `<link rel="canonical">` line in each page's `<head>` with your real domain.
+
+## Blog & admin panel
+
+Blog posts are markdown files in `_posts/` (named `YYYY-MM-DD-slug.md` with YAML
+frontmatter: `title`, `date`, optional `cover` and `description`). GitHub Pages'
+built-in Jekyll build renders each one at `/blog/<slug>/` using `_layouts/post.html`,
+and `blog.html` lists them — no local build tooling needed; just push to `main`.
+
+The client edits posts at `<site-url>/admin/` (Sveltia CMS, config in
+`admin/config.yml`). Publishing from the CMS commits straight to `main`, which
+triggers the Pages rebuild (~1 minute). Sign-in options:
+
+1. **Personal access token** (quick start): the client needs a GitHub account with
+   write access to this repo, and a fine-grained PAT (Contents: read/write). Paste
+   it once on the /admin sign-in screen.
+2. **"Sign in with GitHub" button** (nicer): deploy the free
+   [sveltia-cms-auth](https://github.com/sveltia/sveltia-cms-auth) Cloudflare
+   Worker, create a GitHub OAuth app, then add `base_url: <worker-url>` under
+   `backend:` in `admin/config.yml`.
+
+Note: image paths in posts are stored as `/Stars_medical/assets/blog/...` (the
+GitHub Pages project path). If a custom domain is added later, set `baseurl: ""`
+in `_config.yml`, change `public_folder` in `admin/config.yml`, and fix the paths
+in old posts.
 
 ## Contact form
 

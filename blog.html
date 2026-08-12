@@ -1,22 +1,24 @@
+---
+permalink: /blog.html
+---
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Our Team &amp; Faculty | STARS Training Academy</title>
-  <meta name="description" content="Meet the STARS Training Academy leadership and faculty: experienced instructors across nursing, critical care, EMS, disaster response and medical education.">
+  <title>Blog | STARS Training Academy</title>
+  <meta name="description" content="News, training camps, life-saving tips and stories from STARS Training Academy — hands-on emergency training in Bengaluru.">
   <meta name="theme-color" content="#0b5366">
-  <meta property="og:title" content="Our Team &amp; Faculty | STARS Training Academy">
-  <meta property="og:description" content="Led by Mr. Shashi Kumara H S, a Florence Nightingale Awardee and AHA Master Trainer, with faculty spanning decades of clinical experience.">
+  <meta property="og:title" content="Blog | STARS Training Academy">
+  <meta property="og:description" content="News, training camps, life-saving tips and stories from STARS Training Academy.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="STARS Training Academy">
   <meta property="og:locale" content="en_IN">
-  <meta property="og:image" content="assets/page5_img1.webp">
   <link rel="icon" href="assets/stars-logo.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/stars-logo.png">
   <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="styles.css?v=6">
-  <script defer src="script.js?v=6"></script>
+  <link rel="stylesheet" href="styles.css?v=7">
+  <script defer src="script.js?v=7"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -34,10 +36,10 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="programmes.html">Programmes</a>
-        <a href="team.html" aria-current="page">Team</a>
+        <a href="team.html">Team</a>
         <a href="partners.html">Partners</a>
         <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
+        <a href="blog.html" aria-current="page">Blog</a>
         <a href="faq.html">FAQ</a>
         <a href="contact.html" class="nav-cta">Request Training</a>
       </nav>
@@ -47,50 +49,46 @@
   <main id="main">
     <section class="page-hero">
       <div class="container">
-        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span> Team</nav>
-        <h1>The people behind <em>every confident response.</em></h1>
-        <p class="page-lead">Experience across nursing, critical care, EMS, disaster response and medical education &mdash; guiding every STARS programme.</p>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span> Blog</nav>
+        <h1>Stories, camps and <em>life-saving know-how.</em></h1>
+        <p class="page-lead">Updates from our training camps, awareness drives and practical guides on emergency readiness — written by the STARS team.</p>
       </div>
     </section>
 
-    <section id="team" class="section team-section" style="padding-top:70px;">
+    <section class="section blog-section" style="padding-top:70px;">
       <div class="container">
-        <div class="founder-card reveal">
-          <div class="founder-image"><img src="assets/page5_img1.webp" alt="Shashi Kumara H S, Founder and CEO" width="600" height="700" loading="lazy"></div>
-          <div class="founder-copy">
-            <p class="eyebrow eyebrow-light"><span></span> Leadership</p>
-            <h2>Mr. Shashi Kumara H S</h2>
-            <p class="founder-role">Founder &amp; CEO &middot; M.Sc, Medical Surgical Nursing</p>
-            <div class="award-row"><span>Florence Nightingale Awardee</span><span>AHA Master Trainer</span><span>JeevaRaksha Instructor</span></div>
-            <p>Shashi has mentored more than 100,000 learners and conducted over 5,000 trainings. His mission is to bring realistic emergency simulation to campuses across India and shape a generation of confident lifesavers.</p>
-            <blockquote>&ldquo;Training today for a safer tomorrow.&rdquo;</blockquote>
-          </div>
+        {% if site.posts.size > 0 %}
+        <div class="blog-grid">
+          {% for post in site.posts %}
+          <a class="blog-card reveal" href="{{ post.url | relative_url }}">
+            {% if post.cover %}
+            <img src="{{ post.cover }}" alt="" loading="lazy">
+            {% else %}
+            <div class="blog-card-placeholder" aria-hidden="true"><img src="assets/stars-logo.png" alt=""></div>
+            {% endif %}
+            <div class="blog-card-body">
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+              <h3>{{ post.title }}</h3>
+              <p>{{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 140 }}</p>
+              <span class="text-link">Read more &rarr;</span>
+            </div>
+          </a>
+          {% endfor %}
         </div>
-
-        <div class="section-heading team-heading reveal">
-          <p class="eyebrow"><span></span> The faculty</p>
-          <h2>Experience across nursing, critical care, EMS and education.</h2>
+        {% else %}
+        <div class="blog-empty">
+          <h2>Posts are on the way.</h2>
+          <p>We're preparing our first stories — check back soon.</p>
         </div>
-        <div class="team-grid reveal">
-          <article class="team-card"><img src="assets/page5_img2.webp" alt="Dr. Prasanna Kumar" width="300" height="309" loading="lazy"><h3>Dr. Prasanna Kumar</h3><p>Executive Director</p><span>40+ years</span></article>
-          <article class="team-card"><img src="assets/page5_img9.webp" alt="Dr. Pramodh R K" width="300" height="309" loading="lazy"><h3>Dr. Pramodh R K</h3><p>Executive Director &middot; Disaster, EMS &amp; critical-care protocols</p><span>25+ years</span></article>
-          <article class="team-card"><img src="assets/page5_img10.webp" alt="Dr. I Clement" width="300" height="309" loading="lazy"><h3>Dr. I Clement</h3><p>Executive Director &middot; Nursing researcher and author</p><span>25+ years</span></article>
-          <article class="team-card"><img src="assets/page5_img7.webp" alt="Dr. Priyamvada B" width="300" height="309" loading="lazy"><h3>Dr. Priyamvada B</h3><p>Senior Program Manager</p><span>20+ years</span></article>
-          <article class="team-card"><img src="assets/page5_img3.webp" alt="Dr. Nagarjun K P" width="300" height="309" loading="lazy"><h3>Dr. Nagarjun K P</h3><p>Director &middot; National-level first-aid instructor</p><span>15+ years</span></article>
-          <article class="team-card"><img src="assets/page5_img4.webp" alt="Mr. Ravi Kumara S K" width="300" height="309" loading="lazy"><h3>Mr. Ravi Kumara S K</h3><p>COO &amp; Co-Founder &middot; AHA instructor</p><span>15+ years</span></article>
-          <article class="team-card"><img src="assets/page5_img11.webp" alt="Mr. Chandrashekara" width="300" height="309" loading="lazy"><h3>Mr. Chandrashekara</h3><p>Chief Financial Officer &amp; Co-Founder</p><span>15+ years</span></article>
-          <article class="team-card"><img src="assets/page5_img6.webp" alt="Mr. Manohar" width="300" height="309" loading="lazy"><h3>Mr. Manohar</h3><p>Senior EMS Instructor</p><span>15+ years</span></article>
-          <article class="team-card"><img src="assets/page5_img5.webp" alt="Ms. Anjum Ibrahim" width="300" height="309" loading="lazy"><h3>Ms. Anjum Ibrahim</h3><p>Senior EMS Instructor</p><span>18+ years</span></article>
-          <article class="team-card"><img src="assets/page5_img8.webp" alt="Mr. Vivek A" width="300" height="309" loading="lazy"><h3>Mr. Vivek A</h3><p>Administrative Officer &amp; Co-Founder</p><span>2+ years</span></article>
-        </div>
+        {% endif %}
       </div>
     </section>
 
     <section class="cta-band">
       <div class="container cta-inner reveal">
         <div>
-          <h2>Train with instructors who've done it for real.</h2>
-          <p>Bring this depth of experience to your institution's next training programme.</p>
+          <h2>Ready to train with STARS?</h2>
+          <p>Bring hands-on emergency training to your campus, clinic or workplace.</p>
         </div>
         <div class="cta-actions">
           <a class="button button-primary" href="contact.html">Request training</a>
