@@ -9,7 +9,6 @@ Secondary action: Explore programmes
 
 ## Credibility
 - AHA aligned training site
-- Official JeevaRaksha partner
 - ISO 9001:2015
 - 4.9 stars and 3,000+ reviews
 
@@ -36,14 +35,11 @@ From nursing and medical colleges to hospitals, corporate teams, schools and com
 ### STARS Certified
 First-Aid Advanced; First Responder (ERT); Health Assessment; BLS & BCLS; Palliative Care; IMNCI; Essential Newborn Care; Facility Based Newborn Care; Pediatric Advanced Life Support; SBA & Safe Delivery App; Pre-Hospital Trauma Life Support.
 
-### JeevaRaksha
-Basic Emergency Care Life Support (BECLS); Emergency Nurse Life Support (ENLS).
-
 ### American Heart Association
 Basic Life Support (BLS); Advanced Cardiovascular Life Support (ACLS).
 
 ## Leadership
-Mr. Shashi Kumara H S, Founder and CEO. Florence Nightingale Awardee, AHA Training Center Faculty (Master Trainer), JeevaRaksha Certified Instructor.
+Mr. Shashi Kumara H S, Founder and CEO. Florence Nightingale Awardee, AHA Training Center Faculty (Master Trainer).
 
 ## Contact
 Head office: No. 201, Raksha, 1st Floor, 7th Cross, Soap Factory Layout, Manjunatha Nagar, Bengaluru, Karnataka 560073. Near Chikkabidarakallu Metro Station, behind Prestige Jindal City Apartments.

@@ -6,7 +6,7 @@ A responsive, multi-page website for STARS Training Academy — hands-on emergen
 
 - `index.html` — Home (hero, impact stats, why STARS, programme preview, CTA)
 - `about.html` — About the academy + "learn by doing"
-- `programmes.html` — Full course catalogue (STARS Certified / JeevaRaksha / AHA tabs)
+- `programmes.html` — Full course catalogue (STARS Certified / AHA tabs)
 - `team.html` — Founder + faculty
 - `partners.html` — Partner institutions
 - `blog.html` — Blog listing (posts rendered by Jekyll from `_posts/`)
